@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CSS for landing page
+
+/*Navigation Bar*/
+#navbar {
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: rgb(47, 18, 84);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#navbar a{
+    font-size: 1.3rem;
+    font-family: 'Baloo 2', cursive;
+}
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo 2', cursive;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/*Home Section*/
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 478px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('https://media.istockphoto.com/id/1173451503/vector/space-background-with-realistic-nebula-and-shining-stars-colorful-cosmos-with-stardust-and.jpg?s=612x612&w=0&k=20&c=mEoyUd-7lXPnVzcDgN_LFdHTiGAnkzjlgtXEte9KMVc=') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+#home h1 {
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#home h1 span{
+    color: lch(53 115.47 319.85);
+}
+
+
+/*CSS for index page*/
+
+#jobs::before {
+    content: "";
+    position: absolute;
+    background: url('https://media.istockphoto.com/id/1148136785/photo/purple-pink-black-abstract-background.jpg?s=612x612&w=0&k=20&c=G5G41QrXqIjq9un7wYRMMyozM_4pgcb-CRs7dJXzj8g=') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+#jobs .input-box {
+    position: relative;
+    height: 50px;
+    max-width: 705px;
+    width: 100%;
+    background: #fff;
+    margin: 10px 400px;
+    border-radius: 24px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#jobs .input-box i,
+  .input-box .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#jobs .input-box i {
+    left: 20px;
+    font-size: 30px;
+    color: #707070;
+}
+
+#jobs .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    padding: 12px 155px 0 51px;
+    background-color: transparent;
+}
+
+#jobs .input-box .button {
+    right: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    background-color: #4070f4;
+    cursor: pointer;
+}
+
+#jobs .input-box .button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+#jobs{
+    margin: 40px;
+}
+
+#jobs h1{
+    color: white;
+    padding: 25px 4px;
+}
+
+#jobs.row {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.row {
+    --bs-gutter-x: -20.5rem;
+}
+
+#jobs .col-3 {
+    border: 1px solid rgba(223, 226, 255, 0.5);
+    border-radius: 16px;
+    margin: 10px;
+    /* margin-right: 16px;
+    margin-bottom: 16px; */
+    height: 91px;
+    width: 198px !important;
+    background: rgb(237, 232, 232);
+    padding: 20px 24px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+#jobs .btn {
+    background-color: #4070f4;
+}
+
+/* CSS for notification page */
+
+#notif::before {
+    content: "";
+    position: absolute;
+    background: url('https://media.istockphoto.com/id/1148136785/photo/purple-pink-black-abstract-background.jpg?s=612x612&w=0&k=20&c=G5G41QrXqIjq9un7wYRMMyozM_4pgcb-CRs7dJXzj8g=') repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    color: white;
+}
+
+#notif {
+    width: 100%;
+}
+
+#notif .indno{
+    margin-left: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+#notif td {
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+#notif button {
+    background-color: #4070f4;
+    color: white;
+    text-align:center;
+}
+
+#notif input {
+    background-color: rgb(103, 120, 103);
+    color: white;
+    text-align: center;
+    padding: 6px 24px;
+    border-radius: 6px;
+}
+
+#notif .btn-danger {
+    margin-left: 30px;
+}
+
+/* CSS for Add new notification */
+
+.new-notif {
+    color: white;
+    margin-top: 40px;
+}
+
+.new-notif::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: url('https://media.istockphoto.com/id/1148136785/photo/purple-pink-black-abstract-background.jpg?s=612x612&w=0&k=20&c=G5G41QrXqIjq9un7wYRMMyozM_4pgcb-CRs7dJXzj8g=') no-repeat center center/cover;
+    background-size:cover;
+    overflow-y: scroll;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    color: white;
+}
+
+
+/*CSS for Add Job page*/
+
+#new{
+    color: white;
+}
+
+#new::before {
+    content: "";
+    position: absolute;
+    background: url('https://c4.wallpaperflare.com/wallpaper/103/524/851/abstract-gradient-wallpaper-preview.jpg') no-repeat center center/cover;
+    height: 800px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#new .btn:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/*CSS for show-user page*/
+
+#sh-us{
+    color: white;
+    padding-left: 14px;
+}
+
+#sh-us::before {
+    content: "";
+    position: absolute;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXq-eDjGi9a9W26ix0UALp6U8EmK7rhH_2ZprLK0IRUZna2evogpvX_860Uj1HpAZr9Uw&usqp=CAU') no-repeat center center/cover;
+    height: 800px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+#sh-us a, span{
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+#sh-us .btn-1{
+    background-color: rgb(60, 149, 200);
+}
+
+/*CSS for show page of company*/
+
+#show::before {
+    content: "";
+    position: absolute;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT46DiSQjt9Bbkm4Irrwz31RezExIQ1eQ1S7A&usqp=CAU') no-repeat center center/cover;
+    height: 800px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#show .box {
+    box-sizing: border-box;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#show header {
+    background-color: transparent;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+#show img {
+    float: left;
+    margin-top: 50px;
+    width: 80%;
+    height: 150px; 
+    background: transparent;
+    padding: 20px;
+}
+
+#show .companyInfo {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: transparent;
+    color: white;
+    height: 300px;
+}
+
+#show .box .row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#show .footer {
+    background-color: transparent lightseagreen;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+#show .aft-foot {
+    display: inline;
+}
+
+#show .btn {
+    right: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 9px;
+    background-color: #4070f4;
+    cursor: pointer;
+}
+
+#show .btn-danger {
+    background-color: red;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+}
+
+/* CSS for login page */
+
+#login::before {
+    content: "";
+    position: absolute;
+    background: url('https://media.istockphoto.com/id/1148136785/photo/purple-pink-black-abstract-background.jpg?s=612x612&w=0&k=20&c=G5G41QrXqIjq9un7wYRMMyozM_4pgcb-CRs7dJXzj8g=') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    color: white;
+}
+
+
+#login .form {
+    display: inline-block;
+    padding: 12px 28px;
+}
+
+#login h1,label,input {
+    color: white;
+}
+
+#login h1 {
+    margin-top: 38px;
+}
+
+#login .btn {
+    right: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 9px;
+    background-color: #4070f4;
+    cursor: pointer;
+}
+
+#login .btn:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/* CSS for register page */
+
+#register::before {
+    content: "";
+    position: absolute;
+    background: url('https://media.istockphoto.com/id/1148136785/photo/purple-pink-black-abstract-background.jpg?s=612x612&w=0&k=20&c=G5G41QrXqIjq9un7wYRMMyozM_4pgcb-CRs7dJXzj8g=') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#register .form {
+    display: inline-block;
+    padding: 12px 28px;
+}
+
+#register h1,label,input {
+    color: white;
+}
+
+#register h1 {
+    margin-top: 38px;
+}
+
+#register .btn {
+    right: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 9px;
+    background-color: #4070f4;
+    cursor: pointer;
+}
+
+#register .btn:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/* CSS fr edit page */
+
+#edit {
+    color: white;
+}
+
+#edit::before {
+    content: "";
+    position: absolute;
+    background: url('https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_640.jpg') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+/* CSS for edit-user page */
+
+.edit-user {
+    margin-top: 40px;
+    color: white;
+}
+
+.edit-user::before {
+    content: "";
+    position: absolute;
+    background: url('https://media.istockphoto.com/id/1148136785/photo/purple-pink-black-abstract-background.jpg?s=612x612&w=0&k=20&c=G5G41QrXqIjq9un7wYRMMyozM_4pgcb-CRs7dJXzj8g=') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}

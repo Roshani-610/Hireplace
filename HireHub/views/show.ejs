@@ -1,0 +1,44 @@
+<%- include('./partials/header.ejs') %>
+
+<div id="show">
+    <div class="box">
+        <header>
+            <h1>Show page for <%= job.name %></h1>
+        </header>
+        <!-- <div><%= job.address %></div> -->
+        <div class="row">
+            <div class="col-3">
+                <img class="img-fluid" src="<%= job.image %>" alt="">
+            </div>
+            <div class="companyInfo">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, vitae pariatur odit earum magnam, autem expedita repellendus labore dolorem est hic sint. Modi, fuga delectus. Natus aspernatur modi maxime dolore facere sed. Rem sint nesciunt facilis saepe fugit, expedita eos fuga illum quasi dolorum doloremque, distinctio aut laudantium optio molestias, exercitationem impedit eaque eius quas quae! Id molestias laborum ad, repudiandae necessitatibus aliquam dolores eveniet. Quidem officiis accusamus earum mollitia nobis reiciendis eaque, debitis neque est, aperiam non. Itaque magni modi perspiciatis nam necessitatibus maxime expedita excepturi quam assumenda, iste sequi tempora, temporibus veritatis atque voluptatibus! Id itaque nam reprehenderit libero molestias facilis ipsum consectetur mollitia, soluta expedita. Vitae voluptates iure, minima, laboriosam, est velit quia at commodi a ab facilis. Minima, assumenda?
+            </div>
+        </div>
+        <div class="footer">
+            <div>Location: <%= job.address %></div>
+            <div>Type: <%= job.type %></div>
+            <div>CGPA:<%= job.cgpa %></div>
+            <div>Deadline: <%= job.deadline.toDateString() %></div>
+            <div>CreatedAt: <%= moment(job.createdAt).fromNow() %></div>
+            <div>Package: <%= job.package %></div>
+            <a href="/jobs/<%= job._id %>/apply" class="btn btn-info">Apply</a>
+            <div class="aft-foot"></div>
+                <% if (currentUser && currentUser.isAdmin) { %>
+                <a class="btn btn-warning" href="/jobs/<%= job._id %>/edit">Edit</a>
+                <form action="/jobs/<%= job._id %>?_method=DELETE" method="post">
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                </form>
+                <% } %>
+
+                <% if (currentUser && currentUser.isAdmin) { %>
+                <h1>list of students that have applied</h1>
+                <% for( let student of job.appliedUsers) { %>
+                <div><%= student.username %></div>
+                <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>
