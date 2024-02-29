@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs') %>
+
+<link rel="stylesheet" href="style.css">
+
+<div id="jobs">
+    <div class="input-box">
+        <i class="uil uil-search"></i>
+        <form action="/jobs" method="get">
+            <!--<i class="fa-light fa-magnifying-glass"></i>-->
+            <input type="text" placeholder="Search here..." name="search">
+            <!--<input type="submit" value="search">-->
+            <button class="button">Search</button>
+        </form>
+    </div>
+
+    <h1>List of all latest jobs</h1>
+    <div class="row">
+        <% for(let job of foundJobs){ %>
+            <div class="col-3"><%= job.name %> <a class="btn btn-success" href="/jobs/<%= job._id %>">Read More</a></div>
+        <% } %>
+    </div>
+</div>
+
+
+
+<script src="https://kit.fontawesome.com/d4a684e672.js" crossorigin="anonymous"></script>
+<%- include('./partials/footer.ejs') %>
